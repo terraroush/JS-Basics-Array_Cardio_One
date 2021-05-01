@@ -119,8 +119,7 @@
       const peopleList = orderedPeople.map((person) =>
         person.split(", ").reverse().join(" ")
       );
-
-      console.table(peopleList);
+    //   console.table(peopleList);
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -140,6 +139,16 @@
         "car",
         "truck",
       ];
+
+      const transportation = data.reduce((obj, item) => {
+          if(!obj[item]) {
+           obj[item] = 0;
+          }
+          obj[item]++;
+          return obj;
+      }, {})
+      console.log(transportation);
+
     </script>
   </body>
 </html>
